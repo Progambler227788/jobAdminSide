@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF8B8B</color> <!-- Slightly lighter variant of primary color -->
+    <color name="purple_500">#FF7F7F</color> <!-- Primary color -->
+    <color name="purple_700">#FF6A6A</color> <!-- Slightly darker shade of primary color -->
+    <color name="teal_200">#FFA5A5</color> <!-- Lighter variant of complementary color -->
+    <color name="teal_700">#FFB26161</color> <!-- Darker accent color -->
+    <color name="black">#FF000000</color> <!-- Black color -->
+    <color name="white">#FFFFFFFF</color> <!-- White color -->
+    <!-- Background color of the shimmer effect -->
+    <color name="shimmer_color">#686262</color>
+
+    <!-- Start color of the shimmer gradient -->
+    <color name="shimmer_start_color">#998F8F</color>
+
+    <!-- End color of the shimmer gradient -->
+    <color name="shimmer_end_color">#6D6767</color>
+
+
+    <color name="edit_text_background_light">#FFFFFF</color>
+
+    <color name="edit_text_background_dark">#121212</color>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "617283859652",
+    "project_id": "job-portal-app-56988",
+    "storage_bucket": "job-portal-app-56988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617283859652:android:0fc01929d699f07d98c591",
+        "android_client_info": {
+          "package_name": "com.talhaatif.jobadminapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsWF-7MJv3npvRqExk0x7W7I_jEfaaj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617283859652:android:626702b8eceef17d98c591",
+        "android_client_info": {
+          "package_name": "com.talhaatif.jobportalclient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsWF-7MJv3npvRqExk0x7W7I_jEfaaj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

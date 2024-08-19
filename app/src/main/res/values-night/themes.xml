@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.JobAdminApp"  parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+    <style name="ShapeAppearanceOverlay.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="background">
+
+        <item name="android:backgroundTint">@color/edit_text_background_dark</item>
+
+    </style>
+
+    <style name="settings">
+
+        <item name="android:src">@drawable/ic_settings_night</item>
+
+    </style>
+
+
+    <style name="filter">
+
+        <item name="android:src">@drawable/ic_filter_night</item>
+
+    </style>
+
+
+    <style name="search">
+
+        <item name="android:drawableLeft">@drawable/ic_search_night</item>
+
+    </style>
+
+
+    <style name="addnotebg">
+
+        <item name="android:background">@color/edit_text_background_dark</item>
+
+    </style>
+
+
+
+</resources>

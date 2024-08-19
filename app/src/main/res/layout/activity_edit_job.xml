@@ -1,0 +1,214 @@
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditJob"
+    style="@style/addnotebg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Industry -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/industryInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/industryAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Choose Industry"
+                style="@style/background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Job Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jobTitleInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/jobTitleAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Choose Job Title"
+                style="@style/background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Job Type -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jobTypeInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/jobTypeAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Choose Job Type"
+                style="@style/background" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jobModeInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/jobModeAutoCompleteTextView"
+                style="@style/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Choose Job Mode" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Description"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+
+        <!-- Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/imageEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Add Image (Optional)"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:inputType="none"/>
+
+            <ImageView
+                android:id="@+id/imageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mage"
+                android:layout_gravity="center"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <!-- Salary Start Range -->
+        <EditText
+            android:id="@+id/salaryStartRangeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salary Start Range"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Salary End Range -->
+        <EditText
+            android:id="@+id/salaryEndRangeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salary End Range"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Company -->
+        <EditText
+            android:id="@+id/companyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Job Location -->
+        <EditText
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Job Location"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Job Mode -->
+
+
+        <!-- Job Requirement -->
+        <EditText
+            android:id="@+id/requirementEditText"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:hint="Job Requirement"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+
+        <!-- MaterialButton for Adding Job -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editJobButton"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/purple_500"
+            android:text="Edit"
+            android:textSize="40px"
+            android:textAllCaps="true"
+            android:backgroundTint="@android:color/white"
+            app:cornerRadius="16dp"/>
+
+
+        <!-- MaterialButton for Adding Job -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteJobButton"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/purple_500"
+            android:text="Delete JOB"
+            android:textSize="40px"
+            android:textAllCaps="true"
+            android:backgroundTint="@android:color/white"
+            app:cornerRadius="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

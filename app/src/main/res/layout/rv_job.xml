@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/purple_500">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/company_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/cartoon_happy_eyes"
+            />
+
+        <!-- Text Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Job Title -->
+            <TextView
+                android:id="@+id/job_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Developer"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <!-- Company and Location -->
+            <TextView
+                android:id="@+id/company_and_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Airbnb Inc., USA"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
+
+            <!-- Job Type and Mode -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <!-- Job Type -->
+                <TextView
+                    android:id="@+id/job_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Time"
+                    android:background="@color/white"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+                <!-- Job Mode -->
+                <TextView
+                    android:id="@+id/job_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Remote"
+                    android:background="@color/white"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <!-- Salary -->
+            <TextView
+                android:id="@+id/salary_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$1400 - $2000"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <!-- MaterialButton for sign up with circular corners matching the EditTexts and same height -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apply_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Participants"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:textSize="10sp"
+                android:backgroundTint="@color/white"
+                android:textAllCaps="true"
+                app:cornerRadius="16dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

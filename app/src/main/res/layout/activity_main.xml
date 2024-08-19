@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- To Do List Title -->
+        <TextView
+            android:id="@+id/todo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobs"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Settings Icon -->
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Search Bar with Filter Icon -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_bar_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/todo_title">
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/searchbar"
+                style = "@style/search"
+                android:drawablePadding="8dp"
+                android:hint="Search Jobs..."
+                android:inputType="text"
+                android:padding="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/filter_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Filter Icon -->
+            <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Filter by Date"
+                style="@style/filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/purple_500"
+            android:contentDescription="Add Note"
+            android:src="@drawable/ic_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/overall"
+            app:layout_constraintTop_toBottomOf="@id/search_bar_container"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.FloatingActionButton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/overall"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            >
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_gravity="center"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <include layout="@layout/shimmer_layout"> </include>
+                    <include layout="@layout/shimmer_layout"> </include>
+                    <include layout="@layout/shimmer_layout"> </include>
+                    <include layout="@layout/shimmer_layout"> </include>
+                    <include layout="@layout/shimmer_layout"> </include>
+                    <include layout="@layout/shimmer_layout"> </include>
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <!-- RecyclerView inside ShimmerFrameLayout -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_notes"
+                tools:listitem="@layout/rv_job"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_gravity="center"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/no_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data yet"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fab"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
