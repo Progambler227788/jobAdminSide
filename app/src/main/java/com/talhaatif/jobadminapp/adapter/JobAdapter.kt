@@ -1,4 +1,4 @@
-package com.talhaatif.adapter.jobadminapp
+package com.talhaatif.jobadminapp.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,7 @@ import com.talhaatif.jobadminapp.EditJob
 import com.talhaatif.jobadminapp.ParticipantsJob
 import com.talhaatif.jobadminapp.R
 import com.talhaatif.jobadminapp.databinding.RvJobBinding
-import com.talhaatif.jobportalclient.model.Job
+import com.talhaatif.jobadminapp.model.Job
 
 class JobAdapter(private var jobs: List<Job>, private val activity: Activity) :
     RecyclerView.Adapter<JobAdapter.JobViewHolder>() {

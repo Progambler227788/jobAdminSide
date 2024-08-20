@@ -11,7 +11,7 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.SetOptions
 import com.talhaatif.jobadminapp.databinding.ActivityAddJobBinding
-import com.talhaatif.notesapplication.firebase.Variables
+import com.talhaatif.jobadminapp.firebase.Variables
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -171,6 +171,7 @@ class AddJob : AppCompatActivity() {
             saveJobToFirestore(jobData, progressDialog)
         }
     }
+
 
     private fun saveJobToFirestore(jobData: Map<String, Any>, progressDialog: ProgressDialog) {
         Variables.db.collection("jobs")

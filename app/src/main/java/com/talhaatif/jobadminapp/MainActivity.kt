@@ -6,11 +6,11 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.firebase.firestore.FirebaseFirestore
-import com.talhaatif.adapter.jobadminapp.JobAdapter
+import com.talhaatif.jobadminapp.adapter.JobAdapter
 import com.talhaatif.jobadminapp.databinding.ActivityMainBinding
-import com.talhaatif.jobportalclient.model.Job
-import com.talhaatif.notesapplication.firebase.Variables
+import com.talhaatif.jobadminapp.firebase.Variables
+import com.talhaatif.jobadminapp.model.Job
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
                     jobList.add(job)
                 }
                 jobAdapter.updateJobs(jobList)
-                jobAdapter.notifyDataSetChanged()
 
                 // Stop the shimmer animation and show the RecyclerView
                 binding.shimmerViewContainer.stopShimmer()
@@ -78,6 +77,10 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == EDIT_JOB && resultCode == RESULT_OK) {
             val noteUpdated = data?.getBooleanExtra("jobUpdated", false) ?: false
             if (noteUpdated) {
+                // Start the shimmer animation
+                binding.shimmerViewContainer.visibility = View.VISIBLE
+                binding.shimmerViewContainer.startShimmer()
+                binding.rvNotes.visibility = View.INVISIBLE
 
                 loadJobsFromFirestore()
 

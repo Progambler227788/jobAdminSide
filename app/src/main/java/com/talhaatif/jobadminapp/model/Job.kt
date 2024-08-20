@@ -1,4 +1,4 @@
-package com.talhaatif.jobportalclient.model
+package com.talhaatif.jobadminapp.model
 
 
 data class Job(

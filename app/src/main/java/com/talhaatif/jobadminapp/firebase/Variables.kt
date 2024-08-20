@@ -1,4 +1,4 @@
-package com.talhaatif.notesapplication.firebase
+package com.talhaatif.jobadminapp.firebase
 
 import android.annotation.SuppressLint
 import android.content.Context

@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.talhaatif.jobadminapp.adapter.ParticipantAdapter
 import com.talhaatif.jobadminapp.databinding.ActivityParticipantsJobBinding
+import com.talhaatif.jobadminapp.firebase.Variables
 import com.talhaatif.jobadminapp.model.User
-import com.talhaatif.notesapplication.firebase.Variables
 
 class ParticipantsJob : AppCompatActivity() {
     private lateinit var binding: ActivityParticipantsJobBinding
@@ -116,8 +116,9 @@ class ParticipantsJob : AppCompatActivity() {
                     if (status == "accepted") {
                         jobRef.update("jobAppliedUsers", appliedUsers + userId)
                     }
-                    // Refresh participant list
-                    fetchParticipants()
+
+//                    // Refresh participant list
+//                    fetchParticipants()
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Failed to update job status", Toast.LENGTH_SHORT).show()
